@@ -1,8 +1,8 @@
 
 refine connection SMB_Conn += {
 	%member{
-		analyzer::Analyzer *gssapi;
-		analyzer::Analyzer *ntlm;
+		zeek::analyzer::Analyzer *gssapi;
+		zeek::analyzer::Analyzer *ntlm;
 	%}
 
 	%init{

@@ -85,15 +85,18 @@ int perftools_leaks = 0;
 int perftools_profile = 0;
 #endif
 
-DNS_Mgr* dns_mgr;
-TimerMgr* timer_mgr;
 zeek::ValManager* zeek::val_mgr = nullptr;
 zeek::ValManager*& val_mgr = zeek::val_mgr;
+zeek::analyzer::Manager* zeek::analyzer::analyzer_mgr = nullptr;
+zeek::analyzer::Manager*& analyzer_mgr = zeek::analyzer::analyzer_mgr;
+
+DNS_Mgr* dns_mgr;
+TimerMgr* timer_mgr;
+
 logging::Manager* log_mgr = nullptr;
 threading::Manager* thread_mgr = nullptr;
 input::Manager* input_mgr = nullptr;
 zeek::plugin::Manager* plugin_mgr = nullptr;
-analyzer::Manager* analyzer_mgr = nullptr;
 file_analysis::Manager* file_mgr = nullptr;
 zeekygen::Manager* zeekygen_mgr = nullptr;
 iosource::Manager* iosource_mgr = nullptr;
